@@ -5,7 +5,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 def main():
-    st.title("Détection de l'extinction de l'éclairage public")
+    st.set_page_config(layout="wide")
+    st.title("Visualisation de l'évolution de la radiance nocturne des communes en France")
     
     src = 'radiance_time_series_interp_9_q90.parquet'
     df = pd.read_parquet(src)
