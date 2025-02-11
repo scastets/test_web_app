@@ -7,7 +7,7 @@ def main():
     st.title("Détection de l'extinction de l'éclairage public")
     
     src = 'radiance_time_series_interp_9_q90.parquet'
-    df = pd.read_parquet(src, index_col=0)
+    df = pd.read_parquet(src)
 
     commune = st.selectbox("Choisir une commune", df['code_insee'].unique())
     
